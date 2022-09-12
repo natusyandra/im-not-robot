@@ -1,0 +1,6 @@
+framework module Pods_Im_not_robot {
+  umbrella header "Pods-Im not robot-umbrella.h"
+
+  export *
+  module * { export * }
+}
