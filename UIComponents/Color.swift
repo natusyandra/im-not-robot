@@ -1,17 +1,11 @@
-//
-//  MainColor.swift
-//  Im not robot
-//
-//  Created by Котик on 08.09.2022.
-//
 
 import Foundation
 import UIKit
 
 class Pallete {
-    static var blueColor: UIColor = UIColor.hex("#296ed0")
+    static var blueColor: UIColor = UIColor.hex("#0ba1ff")
     static var fillSecondary: UIColor = UIColor.hex("#787880")
-    static var blueAnother: UIColor = UIColor.hex("#378eff")
+    static var grayLabel: UIColor = UIColor.hex("#788ead")
     static var lightGray: UIColor = UIColor.hex("#D3D3D3")
     static var lightRed: UIColor = UIColor.hex("#cf7986")
 }

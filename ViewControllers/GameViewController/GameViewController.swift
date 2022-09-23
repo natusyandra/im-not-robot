@@ -1,9 +1,3 @@
-//
-//  GameViewController.swift
-//  Im not robot
-//
-//  Created by Котик on 19.08.2022.
-//
 
 import Foundation
 import UIKit
@@ -13,18 +7,9 @@ class GameViewController: UIViewController {
     
     var numberArray = ["1","2","3","4","5","6","7","8","9"]
     
-    let numberOfPlayersLabel: UILabel = {
-        let label = UILabel()
-        label.backgroundColor = .white
-        label.textColor = .black
-        label.textAlignment = .right
-        label.font = UIFont(name:"STHeitiTC-Light", size: 20.0)
-        return label
-    }()
-    
     let rolesLabel: UILabel  = {
         let label = UILabel()
-        label.backgroundColor = Pallete.blueAnother
+        label.backgroundColor = Pallete.grayLabel
         label.textColor = .white
         label.font = UIFont(name:"STHeitiTC-Medium", size: 120.0)
         label.textAlignment = .center
@@ -44,7 +29,7 @@ class GameViewController: UIViewController {
     
     public var numberOfPlayers: Int = 0 {
         didSet {
-            numberOfPlayersLabel.text = "Игроков: \(numberOfPlayers)"
+            title = "Игроков: \(numberOfPlayers)"
         }
     }
     
@@ -57,8 +42,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-//        title = "Поиграем?"
-        navigationController?.navigationBar.prefersLargeTitles = true
         addSubviews()
         layoutConstraints()
         startNewGame()
@@ -68,21 +51,14 @@ class GameViewController: UIViewController {
     }
     
     func addSubviews() {
-        view.addSubview(numberOfPlayersLabel)
         view.addSubview(rolesLabel)
         view.addSubview(nextHideButton)
     }
     
     func layoutConstraints() {
-        numberOfPlayersLabel.snp.makeConstraints {
-            $0.top.equalTo(view.snp.top).offset(18)
-            $0.left.equalTo(view.snp.left).offset(30)
-            $0.right.equalTo(view.snp.right).offset(-30)
-            $0.height.equalTo(50)
-            
             rolesLabel.snp.makeConstraints  {
-                $0.top.equalTo(numberOfPlayersLabel.snp.bottom).offset(10)
-                $0.bottom.equalTo(view.snp.bottom).offset(-100)
+                $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+                $0.bottom.equalTo(nextHideButton.snp.top).offset(-10)
                 $0.left.equalTo(view.snp.left).offset(16)
                 $0.right.equalTo(view.snp.right).offset(-16)
                 
@@ -91,11 +67,10 @@ class GameViewController: UIViewController {
                     $0.height.equalTo(50)
                     $0.left.equalTo(view.snp.left).offset(16)
                     $0.right.equalTo(view.snp.right).offset(-16)
-                    $0.bottom.equalTo(view.snp.bottom).offset(-30)
+                    $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
                 }
             }
         }
-    }
     
     func startNewGame() {
         // Тут задаем рандомное число номера карточки

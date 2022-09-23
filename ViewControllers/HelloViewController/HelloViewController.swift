@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  Im not robot
-//
-//  Created by Котик on 18.08.2022.
-//
 
 import UIKit
 import SnapKit
@@ -13,9 +7,8 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     private let headerView: UIImageView = {
         let header = UIImageView()
         header.clipsToBounds = true
-        header.contentMode = .scaleAspectFill
-        header.image = UIImage(named: "botLogo")
-        header.translatesAutoresizingMaskIntoConstraints = false
+        header.contentMode = .scaleAspectFit
+        header.image = UIImage(named: "urban")
         return header
     }()
 
@@ -55,7 +48,7 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Передумал", style: UIBarButtonItem.Style.done, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Передумал", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         title = "Я не робот"
         addSubviews()
         layoutConstraints()
@@ -80,13 +73,13 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
 
     func layoutConstraints() {
         headerView.snp.makeConstraints {
-            $0.top.equalTo(view.snp.top)
-            $0.left.equalTo(view.snp.left)
-            $0.right.equalTo(view.snp.right)
-            $0.bottom.equalTo(view.snp.bottom)
+            $0.height.equalTo(500)
+            $0.width.equalTo(300)
+            $0.centerY.equalToSuperview().offset(50)
+            $0.centerX.equalToSuperview()
         }
         inputField.snp.makeConstraints {
-            $0.top.equalTo(view.snp.top).offset(100)
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
             $0.left.equalTo(view.snp.left).offset(30)
             $0.right.equalTo(view.snp.right).offset(-30)
             $0.height.equalTo(50)
@@ -100,7 +93,7 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
             $0.right.equalTo(view.snp.right).offset(-33)
         }
         buttonToBegin.snp.makeConstraints {
-            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-30)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
             $0.left.equalTo(view.snp.left).offset(16)
             $0.right.equalTo(view.snp.right).offset(-16)
             $0.height.equalTo(50)

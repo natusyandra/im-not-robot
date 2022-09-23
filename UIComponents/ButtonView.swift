@@ -1,9 +1,3 @@
-//
-//  Buttton.swift
-//  Im not robot
-//
-//  Created by Котик on 12.09.2022.
-//
 
 import UIKit
 
