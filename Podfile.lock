@@ -1,16 +1,35 @@
 PODS:
+<<<<<<< HEAD
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
+=======
+  - AnimatedField (2.4.4)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - AnimatedField
+>>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
   - SnapKit
 
 SPEC REPOS:
   trunk:
+<<<<<<< HEAD
     - SnapKit
 
 SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
 PODFILE CHECKSUM: 6d4612acf815036b7ec1139bb491299ac9e49505
+=======
+    - AnimatedField
+    - SnapKit
+
+SPEC CHECKSUMS:
+  AnimatedField: af48a2d59a50b33b30446267f7f2af274296203c
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 975d2246226e55057767d9a4a2c8a017485ca97a
+>>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
 
 COCOAPODS: 1.11.3
