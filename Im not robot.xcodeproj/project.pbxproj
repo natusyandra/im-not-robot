@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		23ECDF0FCFB98756F4CD7498 /* Pods_Im_not_robot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57AF42C906E68E0FC65C423 /* Pods_Im_not_robot.framework */; };
+		6E3B0C322989206A00E5F34C /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B0C312989206A00E5F34C /* InformationViewController.swift */; };
 		6E77C69028ADBD03008D10E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E77C68F28ADBD03008D10E6 /* AppDelegate.swift */; };
 		6E77C69228ADBD03008D10E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E77C69128ADBD03008D10E6 /* SceneDelegate.swift */; };
 		6E77C69428ADBD03008D10E6 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E77C69328ADBD03008D10E6 /* HelloViewController.swift */; };
@@ -22,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		3EF068172EFFE403DE5FECB9 /* Pods-Im not robot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im not robot.release.xcconfig"; path = "Target Support Files/Pods-Im not robot/Pods-Im not robot.release.xcconfig"; sourceTree = "<group>"; };
+		6E3B0C312989206A00E5F34C /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		6E3B0C332989239400E5F34C /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Pods; sourceTree = "<group>"; };
 		6E77C68C28ADBD03008D10E6 /* Im not robot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Im not robot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E77C68F28ADBD03008D10E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E77C69128ADBD03008D10E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,10 +56,26 @@
 		44E08B09FF7951CD5C054A3B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				6E3B0C332989239400E5F34C /* Pods */,
 				7555B4DBB5CD161732CDBAD4 /* Pods-Im not robot.debug.xcconfig */,
 				3EF068172EFFE403DE5FECB9 /* Pods-Im not robot.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6E3B0C2D2989203800E5F34C /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		6E3B0C302989206A00E5F34C /* InformationViewcontroller */ = {
+			isa = PBXGroup;
+			children = (
+				6E3B0C312989206A00E5F34C /* InformationViewController.swift */,
+			);
+			path = InformationViewcontroller;
 			sourceTree = "<group>";
 		};
 		6E77C68328ADBD03008D10E6 = {
@@ -68,6 +87,7 @@
 				6E77C68D28ADBD03008D10E6 /* Products */,
 				44E08B09FF7951CD5C054A3B /* Pods */,
 				DE3FAF4A3CB10581628A22BA /* Frameworks */,
+				6E3B0C2D2989203800E5F34C /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +116,7 @@
 		6ED70A2928CEFEDA00E1D767 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				6E3B0C302989206A00E5F34C /* InformationViewcontroller */,
 				6ED70A2C28CEFF4400E1D767 /* GameViewController */,
 				6ED70A2B28CEFF3200E1D767 /* HelloViewController */,
 			);
@@ -257,6 +278,7 @@
 				6E77C69428ADBD03008D10E6 /* HelloViewController.swift in Sources */,
 				6E77C69028ADBD03008D10E6 /* AppDelegate.swift in Sources */,
 				6E77C69228ADBD03008D10E6 /* SceneDelegate.swift in Sources */,
+				6E3B0C322989206A00E5F34C /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +427,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3PR45WW6CK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
@@ -423,9 +445,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unicorn.Im-not-robot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -436,7 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 3PR45WW6CK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
@@ -454,9 +479,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.unicorn.Im-not-robot";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
