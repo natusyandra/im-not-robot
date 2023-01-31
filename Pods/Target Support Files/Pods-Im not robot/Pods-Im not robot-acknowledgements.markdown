@@ -1,8 +1,6 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-<<<<<<< HEAD
-=======
 ## AnimatedField
 
 Copyright (c) 2019 alberdev <albertokr@gmail.com>
@@ -26,7 +24,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
 ## SnapKit
 
 Copyright (c) 2011-Present SnapKit Team - https://github.com/SnapKit

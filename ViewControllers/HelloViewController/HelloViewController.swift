@@ -1,10 +1,7 @@
 
 import UIKit
 import SnapKit
-<<<<<<< HEAD
-=======
 import AnimatedField
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
 
 class HelloViewController: UIViewController, UITextFieldDelegate {
     
@@ -15,20 +12,6 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         header.image = UIImage(named: "urban")
         return header
     }()
-<<<<<<< HEAD
-
-    let inputField: UITextField = {
-        let field = UITextField()
-        field.placeholder = "Введите количество игроков..."
-        field.layer.masksToBounds = true
-        field.returnKeyType = .next
-        field.keyboardType = UIKeyboardType.numberPad
-        field.leftViewMode = .always
-        field.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
-        field.layer.cornerRadius = 10
-        field.backgroundColor = Pallete.lightGray
-        field.text = ""
-=======
     
     let inputField: AnimatedField = {
         let field = AnimatedField()
@@ -39,20 +22,13 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         field.format.titleColor = UIColor.lightGray
         field.format.textColor = UIColor.darkGray
         field.format.highlightColor = .lightGray
-
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
         return field
     }()
     
     let switchLabel: UILabel = {
         let label = UILabel()
-<<<<<<< HEAD
-        label.text = "Сделать игру интересней?"
-        label.font = UIFont(name:"STHeitiTC-Light", size: 20.0)
-=======
         label.text = "Сделать игру интересней"
         label.font = UIFont(name:"STHeitiTC-Light", size: 18.0)
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
         return label
     }()
     
@@ -62,8 +38,6 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         return switchServ
     }()
     
-<<<<<<< HEAD
-=======
     let aboutGameWithServer: UIButton = {
         let button = UIButton()
 //        button.layer.cornerRadius = 10
@@ -76,17 +50,12 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         return button
     }()
     
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
     let buttonToBegin: MyButton = {
         let button = MyButton()
         button.setTitle("Начать", for: .normal)
         return button
     }()
-<<<<<<< HEAD
-     
-=======
-    
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -97,15 +66,10 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         buttonToBegin.addTarget(self,
                                 action: #selector(handleShowNext),
                                 for: .touchUpInside)
-<<<<<<< HEAD
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        view.addGestureRecognizer(tap)
-=======
         
         aboutGameWithServer.addTarget(self,
                                 action: #selector(openInformationAboutGameWithServer),
                                 for: .touchUpInside)
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -115,20 +79,12 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     func addSubviews() {
         view.addSubview(headerView)
         view.addSubview(inputField)
-<<<<<<< HEAD
-        view.addSubview(buttonToBegin)
-        view.addSubview(switchServer)
-        view.addSubview(switchLabel)
-    }
-
-=======
         view.addSubview(switchServer)
         view.addSubview(switchLabel)
         view.addSubview(aboutGameWithServer)
         view.addSubview(buttonToBegin)
     }
     
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
     func layoutConstraints() {
         headerView.snp.makeConstraints {
             $0.height.equalTo(500)
@@ -140,7 +96,6 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
             $0.left.equalTo(view.snp.left).offset(30)
             $0.right.equalTo(view.snp.right).offset(-30)
-<<<<<<< HEAD
             $0.height.equalTo(50)
         }
         switchLabel.snp.makeConstraints {
@@ -149,7 +104,6 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         }
         switchServer.snp.makeConstraints {
             $0.top.equalTo(inputField.snp.bottom).offset(20)
-=======
             $0.height.greaterThanOrEqualTo(50)
         }
         switchLabel.snp.makeConstraints {
@@ -162,7 +116,6 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         }
         switchServer.snp.makeConstraints {
             $0.top.equalTo(inputField.snp.bottom).offset(40)
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
             $0.right.equalTo(view.snp.right).offset(-33)
         }
         buttonToBegin.snp.makeConstraints {
@@ -172,11 +125,7 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
             $0.height.equalTo(50)
         }
     }
-    
-<<<<<<< HEAD
-    @objc func handleTap() {
-        inputField.resignFirstResponder()
-=======
+        
 //    @objc func handleTap() {
 //        inputField.resignFirstResponder()
 //    }
@@ -194,20 +143,12 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     @objc func openInformationAboutGameWithServer() {
         let vc = InformationViewController()
         navigationController?.present(vc, animated: true)
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
     }
     
     @objc func handleShowNext() {
         let vc = GameViewController()
         guard let numbor = (inputField.text)?.description.toInt() else
-<<<<<<< HEAD
         {return}
-        vc.numberOfPlayers = numbor
-        vc.isGameWithServer = switchServer.isOn
-        navigationController?.pushViewController(vc, animated: true)
-=======
-        { return }
-        
         if (1 < numbor), (numbor < 13) {
             vc.numberOfPlayers = numbor
             vc.isGameWithServer = switchServer.isOn
@@ -218,7 +159,6 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
             inputField.format.alertPosition = .bottom
             inputField.format.textColor = .darkGray
         }
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
     }
 }
 

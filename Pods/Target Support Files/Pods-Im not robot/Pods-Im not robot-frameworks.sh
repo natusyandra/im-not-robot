@@ -176,17 +176,11 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-<<<<<<< HEAD
-  install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-=======
   install_framework "${BUILT_PRODUCTS_DIR}/AnimatedField/AnimatedField.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/AnimatedField/AnimatedField.framework"
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then

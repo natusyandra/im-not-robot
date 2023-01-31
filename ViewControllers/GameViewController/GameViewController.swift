@@ -1,10 +1,7 @@
 
 import Foundation
 import UIKit
-<<<<<<< HEAD
 import SnapKit
-=======
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
 
 class GameViewController: UIViewController {
     
@@ -19,10 +16,7 @@ class GameViewController: UIViewController {
         label.numberOfLines = 0
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 10
-<<<<<<< HEAD
 //        label.layer.borderWidth = 5.0
-=======
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
         label.isHidden = true
         return label
     }()
@@ -69,10 +63,7 @@ class GameViewController: UIViewController {
                 $0.right.equalTo(view.snp.right).offset(-16)
                 
                 nextHideButton.snp.makeConstraints {
-<<<<<<< HEAD
 //                    $0.top.equalTo(rolesLabel.snp.bottom).offset(40)
-=======
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
                     $0.height.equalTo(50)
                     $0.left.equalTo(view.snp.left).offset(16)
                     $0.right.equalTo(view.snp.right).offset(-16)
@@ -116,12 +107,8 @@ class GameViewController: UIViewController {
     func hideCard() {
         // Если все карточки были показаны покажи "А все", а иначе присвой следующее значение лейблу и удали предыдущий, скрой лейбл и присвой кнопке ,Показать,
         if isAllCardShowed() {
-<<<<<<< HEAD
-            rolesLabel.text = "А всё ⛔"
-=======
             rolesLabel.font = UIFont(name:"STHeitiTC-Medium", size: 50.0)
             rolesLabel.text = "Роли распределены ⛔"
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
             nextHideButton.setTitle("Показать ответ", for: .normal)
             nextHideButton.backgroundColor = .systemRed
             showAnswer()

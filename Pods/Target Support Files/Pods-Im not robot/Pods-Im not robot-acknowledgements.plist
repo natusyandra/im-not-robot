@@ -14,8 +14,6 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-<<<<<<< HEAD
-=======
 			<string>Copyright (c) 2019 alberdev &lt;albertokr@gmail.com&gt;
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -45,7 +43,6 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
->>>>>>> 2aa817a6e5b46839c1b2446270130d496337df0d
 			<string>Copyright (c) 2011-Present SnapKit Team - https://github.com/SnapKit
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
