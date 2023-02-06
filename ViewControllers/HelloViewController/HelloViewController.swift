@@ -40,13 +40,9 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     
     let aboutGameWithServer: UIButton = {
         let button = UIButton()
-//        button.layer.cornerRadius = 10
-//        button.layer.borderColor = UIColor.lightGray.cgColor
-//        button.layer.borderWidth = 0
         button.backgroundColor = .clear
         button.setImage(UIImage(systemName: "info.circle"), for: .normal)
         button.tintColor = UIColor.systemGray5
-//        button.font = UIFont(name:"STHeitiTC-Light", size: 10.0) ?? nil!
         return button
     }()
     
@@ -55,7 +51,7 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         button.setTitle("Начать", for: .normal)
         return button
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -68,8 +64,8 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
                                 for: .touchUpInside)
         
         aboutGameWithServer.addTarget(self,
-                                action: #selector(openInformationAboutGameWithServer),
-                                for: .touchUpInside)
+                                      action: #selector(openInformationAboutGameWithServer),
+                                      for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,19 +95,11 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
             $0.height.equalTo(50)
         }
         switchLabel.snp.makeConstraints {
-            $0.top.equalTo(inputField.snp.bottom).offset(20)
-            $0.left.equalTo(view.snp.left).offset(34)
-        }
-        switchServer.snp.makeConstraints {
-            $0.top.equalTo(inputField.snp.bottom).offset(20)
-            $0.height.greaterThanOrEqualTo(50)
-        }
-        switchLabel.snp.makeConstraints {
             $0.top.equalTo(inputField.snp.bottom).offset(40)
             $0.left.equalTo(view.snp.left).offset(30)
         }
         aboutGameWithServer.snp.makeConstraints {
-            $0.top.equalTo(inputField.snp.bottom).offset(37)
+            $0.centerY.equalTo(switchLabel.snp.centerY).offset(1)
             $0.left.equalTo(switchLabel.snp.right).offset(3)
         }
         switchServer.snp.makeConstraints {
@@ -125,20 +113,9 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
             $0.height.equalTo(50)
         }
     }
-        
-//    @objc func handleTap() {
-//        inputField.resignFirstResponder()
-//    }
     
     func showAlert(_ message: String?) {
     }
-    
-//    func hideAlert() {
-//        inputField.format.titleAlwaysVisible = true
-//        inputField.format.alertEnabled = false
-//        inputField.format.alertLineActive = false
-//        inputField.format.textColor = .black
-//    }
     
     @objc func openInformationAboutGameWithServer() {
         let vc = InformationViewController()
@@ -147,8 +124,10 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     
     @objc func handleShowNext() {
         let vc = GameViewController()
-        guard let numbor = (inputField.text)?.description.toInt() else
-        {return}
+        guard let numbor = (inputField.text)?.description.toInt() else {
+            return
+        }
+        
         if (1 < numbor), (numbor < 13) {
             vc.numberOfPlayers = numbor
             vc.isGameWithServer = switchServer.isOn
