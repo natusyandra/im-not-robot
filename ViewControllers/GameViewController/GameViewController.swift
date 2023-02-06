@@ -16,7 +16,6 @@ class GameViewController: UIViewController {
         label.numberOfLines = 0
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 10
-//        label.layer.borderWidth = 5.0
         label.isHidden = true
         return label
     }()
@@ -56,21 +55,20 @@ class GameViewController: UIViewController {
     }
     
     func layoutConstraints() {
-            rolesLabel.snp.makeConstraints  {
-                $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-                $0.bottom.equalTo(nextHideButton.snp.top).offset(-10)
+        rolesLabel.snp.makeConstraints  {
+            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            $0.bottom.equalTo(nextHideButton.snp.top).offset(-10)
+            $0.left.equalTo(view.snp.left).offset(16)
+            $0.right.equalTo(view.snp.right).offset(-16)
+            
+            nextHideButton.snp.makeConstraints {
+                $0.height.equalTo(50)
                 $0.left.equalTo(view.snp.left).offset(16)
                 $0.right.equalTo(view.snp.right).offset(-16)
-                
-                nextHideButton.snp.makeConstraints {
-//                    $0.top.equalTo(rolesLabel.snp.bottom).offset(40)
-                    $0.height.equalTo(50)
-                    $0.left.equalTo(view.snp.left).offset(16)
-                    $0.right.equalTo(view.snp.right).offset(-16)
-                    $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
-                }
+                $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
             }
         }
+    }
     
     func startNewGame() {
         // Тут задаем рандомное число номера карточки
@@ -107,7 +105,7 @@ class GameViewController: UIViewController {
     func hideCard() {
         // Если все карточки были показаны покажи "А все", а иначе присвой следующее значение лейблу и удали предыдущий, скрой лейбл и присвой кнопке ,Показать,
         if isAllCardShowed() {
-            rolesLabel.font = UIFont(name:"STHeitiTC-Medium", size: 50.0)
+            rolesLabel.font = UIFont(name:"STHeitiTC-Medium", size: 45.0)
             rolesLabel.text = "Роли распределены ⛔"
             nextHideButton.setTitle("Показать ответ", for: .normal)
             nextHideButton.backgroundColor = .systemRed
@@ -128,7 +126,7 @@ class GameViewController: UIViewController {
     @objc func showCorrectNumber() {
         rolesLabel.text = randomNumberSave.description
         if isGameWithServer == true {
-            changeOptions() 
+            changeOptions()
             nextHideButton.setTitle("Робот среди нас?", for: .normal)
             showServer()
         } else {
@@ -160,7 +158,6 @@ class GameViewController: UIViewController {
     }
     
     func textWasRobot() {
-//        if arrayOfShuffledCards.contains("404") {
         if arrayOfShuffledCards.last == "404" {
             rolesLabel.font = UIFont(name:"STHeitiTC-Medium", size: 50.0)
             rolesLabel.text = "Робот остался здесь! 🤖"
@@ -174,7 +171,7 @@ class GameViewController: UIViewController {
         nextHideButton.addTarget(self,
                                  action: #selector(openHelloViewController),
                                  for: .touchUpInside)
-        print(arrayOfShuffledCards)
+//        print(arrayOfShuffledCards)
     }
     
     @objc func openHelloViewController() {
