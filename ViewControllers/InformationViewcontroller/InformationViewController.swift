@@ -118,7 +118,3 @@ class InformationViewController: UIViewController {
         }
     }
 }
-
-
-
-

@@ -44,9 +44,11 @@ class GameViewController: UIViewController {
         addSubviews()
         layoutConstraints()
         startNewGame()
-        nextHideButton.addTarget(self,
-                                 action: #selector(showHideCard),
-                                 for: .touchUpInside)
+        nextHideButton.addAction(for: .touchUpInside) { [self] in
+            let impactMed = UIImpactFeedbackGenerator(style: .rigid)
+            impactMed.impactOccurred()
+            self.showHideCard(sender: nextHideButton)
+        }
     }
     
     func addSubviews() {
@@ -85,12 +87,13 @@ class GameViewController: UIViewController {
         rolesLabel.text = arrayOfShuffledCards.popLast()
     }
     
-    @objc func showHideCard() {
-        if rolesLabel.isHidden {
-            rolesLabel.isHidden = false
-            nextHideButton.setTitle("Скрыть 👇", for: .normal)
+    @objc func showHideCard(sender: UIButton) {
+        sender.showAnimation()
+        if self.rolesLabel.isHidden {
+            self.rolesLabel.isHidden = false
+            self.nextHideButton.setTitle("Скрыть 👇", for: .normal)
         } else {
-            hideCard()
+            self.hideCard()
         }
     }
     
@@ -109,18 +112,15 @@ class GameViewController: UIViewController {
             rolesLabel.text = "Роли распределены ⛔"
             nextHideButton.setTitle("Показать ответ", for: .normal)
             nextHideButton.backgroundColor = .systemRed
-            showAnswer()
+            
+            nextHideButton.addAction(for: .touchUpInside) { [self] in
+                showCorrectNumber()
+            }
         } else {
             rolesLabel.text = arrayOfShuffledCards.removeFirst()
             rolesLabel.isHidden = true
             nextHideButton.setTitle("Показать 👉", for: .normal)
         }
-    }
-    
-    func showAnswer() {
-        nextHideButton.addTarget(self,
-                                 action: #selector(showCorrectNumber),
-                                 for: .touchUpInside)
     }
     
     @objc func showCorrectNumber() {
@@ -137,9 +137,9 @@ class GameViewController: UIViewController {
     }
     
     func showServer() {
-        nextHideButton.addTarget(self,
-                                 action: #selector(showGameWithServer),
-                                 for: .touchUpInside)
+        nextHideButton.addAction(for: .touchUpInside) { [self] in
+            showGameWithServer()
+        }
     }
     
     func changeOptions() {
@@ -168,10 +168,9 @@ class GameViewController: UIViewController {
     }
     
     func newGame() {
-        nextHideButton.addTarget(self,
-                                 action: #selector(openHelloViewController),
-                                 for: .touchUpInside)
-//        print(arrayOfShuffledCards)
+        nextHideButton.addAction(for: .touchUpInside) { [self] in
+            openHelloViewController()
+        }
     }
     
     @objc func openHelloViewController() {

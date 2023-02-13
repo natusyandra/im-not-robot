@@ -15,7 +15,8 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     
     let inputField: AnimatedField = {
         let field = AnimatedField()
-        field.attributedPlaceholder = NSAttributedString(string: "Введите количество игроков...", attributes:[.foregroundColor: UIColor.lightGray])
+        field.attributedPlaceholder = NSAttributedString(string: "Введите количество игроков...",
+                                                         attributes:[.foregroundColor: UIColor.lightGray])
         field.keyboardType = .numberPad
         field.format.titleAlwaysVisible = false
         field.format.lineColor = UIColor.lightGray
@@ -33,7 +34,10 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     }()
     
     let switchServer: UISwitch = {
-        let switchServ = UISwitch(frame:CGRect(x: 150, y: 300, width: 0, height: 0))
+        let switchServ = UISwitch(frame:CGRect(x: 150,
+                                               y: 300,
+                                               width: 0,
+                                               height: 0))
         switchServ.onTintColor  = Pallete.blueColor
         return switchServ
     }()
@@ -55,10 +59,14 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Передумал", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Передумал",
+                                                           style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         title = "Я не робот"
         addSubviews()
         layoutConstraints()
+        
+        self.hideKeyboardWhenTappedAround()
+
         buttonToBegin.addTarget(self,
                                 action: #selector(handleShowNext),
                                 for: .touchUpInside)
@@ -122,7 +130,9 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         navigationController?.present(vc, animated: true)
     }
     
-    @objc func handleShowNext() {
+    @objc func handleShowNext(sender: UIButton) {
+        sender.showAnimation()
+        buttonWiggleEmptyField()
         let vc = GameViewController()
         guard let numbor = (inputField.text)?.description.toInt() else {
             return
@@ -137,6 +147,15 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
             inputField.showAlert("От 2 до 12 игроков")
             inputField.format.alertPosition = .bottom
             inputField.format.textColor = .darkGray
+            buttonToBegin.wiggle()
+        }
+    }
+    
+    func buttonWiggleEmptyField() {
+        if ((inputField.text?.isEmpty) != nil) {
+            buttonToBegin.wiggle()
+            let impactMed = UIImpactFeedbackGenerator(style: .rigid)
+            impactMed.impactOccurred()
         }
     }
 }
@@ -151,5 +170,3 @@ extension String {
         }
     }
 }
-
-
