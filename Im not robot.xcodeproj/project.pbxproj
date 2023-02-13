@@ -13,6 +13,7 @@
 		6E44CD36298BABAA00CCF3CE /* WebResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44CD35298BABAA00CCF3CE /* WebResponse.swift */; };
 		6E44CD39298BACDE00CCF3CE /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44CD38298BACDE00CCF3CE /* Description.swift */; };
 		6E68F63C2990CD7100CBFB60 /* ModelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E68F63B2990CD7100CBFB60 /* ModelInfo.swift */; };
+		6E68F6452996096500CBFB60 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E68F6442996096500CBFB60 /* UIExtension.swift */; };
 		6E77C69028ADBD03008D10E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E77C68F28ADBD03008D10E6 /* AppDelegate.swift */; };
 		6E77C69228ADBD03008D10E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E77C69128ADBD03008D10E6 /* SceneDelegate.swift */; };
 		6E77C69428ADBD03008D10E6 /* HelloViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E77C69328ADBD03008D10E6 /* HelloViewController.swift */; };
@@ -33,6 +34,7 @@
 		6E44CD35298BABAA00CCF3CE /* WebResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResponse.swift; sourceTree = "<group>"; };
 		6E44CD38298BACDE00CCF3CE /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
 		6E68F63B2990CD7100CBFB60 /* ModelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInfo.swift; sourceTree = "<group>"; };
+		6E68F6442996096500CBFB60 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		6E77C68C28ADBD03008D10E6 /* Im not robot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Im not robot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E77C68F28ADBD03008D10E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E77C69128ADBD03008D10E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		6E3B0C302989206A00E5F34C /* InformationViewcontroller */ = {
 			isa = PBXGroup;
 			children = (
+				6E44CD37298BACA900CCF3CE /* Models */,
 				6E3B0C312989206A00E5F34C /* InformationViewController.swift */,
 			);
 			path = InformationViewcontroller;
@@ -90,10 +93,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6E68F6432996095700CBFB60 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6E68F6442996096500CBFB60 /* UIExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		6E77C68328ADBD03008D10E6 = {
 			isa = PBXGroup;
 			children = (
-				6E44CD37298BACA900CCF3CE /* Models */,
+				6E68F6432996095700CBFB60 /* Extension */,
 				6ED70A2A28CEFEF100E1D767 /* UIComponents */,
 				6ED70A2928CEFEDA00E1D767 /* ViewControllers */,
 				6E77C68E28ADBD03008D10E6 /* Resources */,
@@ -287,6 +298,7 @@
 				6ED70A2228AF59EC00E1D767 /* GameViewController.swift in Sources */,
 				6E77C69A28ADBD03008D10E6 /* Im_not_robot.xcdatamodeld in Sources */,
 				6ED70A2E28CF023D00E1D767 /* ButtonView.swift in Sources */,
+				6E68F6452996096500CBFB60 /* UIExtension.swift in Sources */,
 				6ED70A2828C9973600E1D767 /* Color.swift in Sources */,
 				6E77C69428ADBD03008D10E6 /* HelloViewController.swift in Sources */,
 				6E44CD36298BABAA00CCF3CE /* WebResponse.swift in Sources */,
