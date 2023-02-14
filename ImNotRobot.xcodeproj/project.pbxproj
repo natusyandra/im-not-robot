@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23ECDF0FCFB98756F4CD7498 /* Pods_Im_not_robot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57AF42C906E68E0FC65C423 /* Pods_Im_not_robot.framework */; };
 		6E3B0C322989206A00E5F34C /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3B0C312989206A00E5F34C /* InformationViewController.swift */; };
 		6E44CD34298B7B7300CCF3CE /* Json.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E44CD33298B7B7300CCF3CE /* Json.json */; };
 		6E44CD36298BABAA00CCF3CE /* WebResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E44CD35298BABAA00CCF3CE /* WebResponse.swift */; };
@@ -24,18 +23,18 @@
 		6ED70A2228AF59EC00E1D767 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED70A2128AF59EC00E1D767 /* GameViewController.swift */; };
 		6ED70A2828C9973600E1D767 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED70A2728C9973600E1D767 /* Color.swift */; };
 		6ED70A2E28CF023D00E1D767 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED70A2D28CF023D00E1D767 /* ButtonView.swift */; };
+		7D16070039CC555A887E213A /* Pods_ImNotRobot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC13B2C9ECF90D9AB95D965 /* Pods_ImNotRobot.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3EF068172EFFE403DE5FECB9 /* Pods-Im not robot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im not robot.release.xcconfig"; path = "Target Support Files/Pods-Im not robot/Pods-Im not robot.release.xcconfig"; sourceTree = "<group>"; };
+		154B7D934262775C64DEF2DB /* Pods-ImNotRobot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImNotRobot.release.xcconfig"; path = "Target Support Files/Pods-ImNotRobot/Pods-ImNotRobot.release.xcconfig"; sourceTree = "<group>"; };
 		6E3B0C312989206A00E5F34C /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
-		6E3B0C332989239400E5F34C /* Pods */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Pods; sourceTree = "<group>"; };
 		6E44CD33298B7B7300CCF3CE /* Json.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Json.json; sourceTree = "<group>"; };
 		6E44CD35298BABAA00CCF3CE /* WebResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResponse.swift; sourceTree = "<group>"; };
 		6E44CD38298BACDE00CCF3CE /* Description.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Description.swift; sourceTree = "<group>"; };
 		6E68F63B2990CD7100CBFB60 /* ModelInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInfo.swift; sourceTree = "<group>"; };
 		6E68F6442996096500CBFB60 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
-		6E77C68C28ADBD03008D10E6 /* Im not robot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Im not robot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E77C68C28ADBD03008D10E6 /* ImNotRobot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImNotRobot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E77C68F28ADBD03008D10E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E77C69128ADBD03008D10E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6E77C69328ADBD03008D10E6 /* HelloViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloViewController.swift; sourceTree = "<group>"; };
@@ -47,8 +46,8 @@
 		6ED70A2128AF59EC00E1D767 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6ED70A2728C9973600E1D767 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		6ED70A2D28CF023D00E1D767 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
-		7555B4DBB5CD161732CDBAD4 /* Pods-Im not robot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im not robot.debug.xcconfig"; path = "Target Support Files/Pods-Im not robot/Pods-Im not robot.debug.xcconfig"; sourceTree = "<group>"; };
-		D57AF42C906E68E0FC65C423 /* Pods_Im_not_robot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Im_not_robot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC13B2C9ECF90D9AB95D965 /* Pods_ImNotRobot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImNotRobot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3DC29B9CF3C9900F2763C38 /* Pods-ImNotRobot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImNotRobot.debug.xcconfig"; path = "Target Support Files/Pods-ImNotRobot/Pods-ImNotRobot.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23ECDF0FCFB98756F4CD7498 /* Pods_Im_not_robot.framework in Frameworks */,
+				7D16070039CC555A887E213A /* Pods_ImNotRobot.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,9 +65,8 @@
 		44E08B09FF7951CD5C054A3B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6E3B0C332989239400E5F34C /* Pods */,
-				7555B4DBB5CD161732CDBAD4 /* Pods-Im not robot.debug.xcconfig */,
-				3EF068172EFFE403DE5FECB9 /* Pods-Im not robot.release.xcconfig */,
+				C3DC29B9CF3C9900F2763C38 /* Pods-ImNotRobot.debug.xcconfig */,
+				154B7D934262775C64DEF2DB /* Pods-ImNotRobot.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -117,7 +115,7 @@
 		6E77C68D28ADBD03008D10E6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6E77C68C28ADBD03008D10E6 /* Im not robot.app */,
+				6E77C68C28ADBD03008D10E6 /* ImNotRobot.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,7 +172,7 @@
 		DE3FAF4A3CB10581628A22BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D57AF42C906E68E0FC65C423 /* Pods_Im_not_robot.framework */,
+				8AC13B2C9ECF90D9AB95D965 /* Pods_ImNotRobot.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -182,9 +180,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6E77C68B28ADBD03008D10E6 /* Im not robot */ = {
+		6E77C68B28ADBD03008D10E6 /* ImNotRobot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6E77C6A328ADBD08008D10E6 /* Build configuration list for PBXNativeTarget "Im not robot" */;
+			buildConfigurationList = 6E77C6A328ADBD08008D10E6 /* Build configuration list for PBXNativeTarget "ImNotRobot" */;
 			buildPhases = (
 				D19EFE21A96007A8C42D2451 /* [CP] Check Pods Manifest.lock */,
 				6E77C68828ADBD03008D10E6 /* Sources */,
@@ -196,9 +194,9 @@
 			);
 			dependencies = (
 			);
-			name = "Im not robot";
+			name = ImNotRobot;
 			productName = "Im not robot";
-			productReference = 6E77C68C28ADBD03008D10E6 /* Im not robot.app */;
+			productReference = 6E77C68C28ADBD03008D10E6 /* ImNotRobot.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -216,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6E77C68728ADBD03008D10E6 /* Build configuration list for PBXProject "Im not robot" */;
+			buildConfigurationList = 6E77C68728ADBD03008D10E6 /* Build configuration list for PBXProject "ImNotRobot" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -229,7 +227,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6E77C68B28ADBD03008D10E6 /* Im not robot */,
+				6E77C68B28ADBD03008D10E6 /* ImNotRobot */,
 			);
 		};
 /* End PBXProject section */
@@ -264,7 +262,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Im not robot-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ImNotRobot-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -277,15 +275,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Im not robot/Pods-Im not robot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ImNotRobot/Pods-ImNotRobot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Im not robot/Pods-Im not robot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ImNotRobot/Pods-ImNotRobot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Im not robot/Pods-Im not robot-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ImNotRobot/Pods-ImNotRobot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -450,7 +448,7 @@
 		};
 		6E77C6A428ADBD08008D10E6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7555B4DBB5CD161732CDBAD4 /* Pods-Im not robot.debug.xcconfig */;
+			baseConfigurationReference = C3DC29B9CF3C9900F2763C38 /* Pods-ImNotRobot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -484,7 +482,7 @@
 		};
 		6E77C6A528ADBD08008D10E6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EF068172EFFE403DE5FECB9 /* Pods-Im not robot.release.xcconfig */;
+			baseConfigurationReference = 154B7D934262775C64DEF2DB /* Pods-ImNotRobot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,7 +517,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6E77C68728ADBD03008D10E6 /* Build configuration list for PBXProject "Im not robot" */ = {
+		6E77C68728ADBD03008D10E6 /* Build configuration list for PBXProject "ImNotRobot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E77C6A128ADBD08008D10E6 /* Debug */,
@@ -528,7 +526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6E77C6A328ADBD08008D10E6 /* Build configuration list for PBXNativeTarget "Im not robot" */ = {
+		6E77C6A328ADBD08008D10E6 /* Build configuration list for PBXNativeTarget "ImNotRobot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6E77C6A428ADBD08008D10E6 /* Debug */,
