@@ -1,12 +1,7 @@
-//
-//  AppDelegate.swift
-//  Im not robot
-//
-//  Created by Котик on 18.08.2022.
-//
 
 import UIKit
 import CoreData
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
