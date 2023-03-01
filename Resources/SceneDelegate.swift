@@ -1,12 +1,7 @@
-//
-//  SceneDelegate.swift
-//  Im not robot
-//
-//  Created by Котик on 18.08.2022.
-//
 
 import UIKit
 
+@available(iOS 14.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -18,7 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            let nc = UINavigationController(rootViewController: HelloViewController())
+            let nc = UINavigationController(rootViewController: LanchScreenController())
             window.rootViewController = nc
             self.window = window
             window.makeKeyAndVisible()

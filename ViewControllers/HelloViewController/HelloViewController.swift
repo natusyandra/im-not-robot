@@ -62,11 +62,11 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Передумал",
                                                            style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         title = "Я не робот"
+        self.navigationItem.setHidesBackButton(true, animated: true)
+        
         addSubviews()
         layoutConstraints()
         
-        self.hideKeyboardWhenTappedAround()
-
         buttonToBegin.addTarget(self,
                                 action: #selector(handleShowNext),
                                 for: .touchUpInside)
@@ -74,6 +74,8 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         aboutGameWithServer.addTarget(self,
                                       action: #selector(openInformationAboutGameWithServer),
                                       for: .touchUpInside)
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -127,7 +129,9 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     
     @objc func openInformationAboutGameWithServer() {
         let vc = InformationViewController()
-        navigationController?.present(vc, animated: true)
+        vc.modalTransitionStyle = .flipHorizontal
+        self.definesPresentationContext = true
+        self.present(vc, animated: true, completion: nil)
     }
     
     @objc func handleShowNext(sender: UIButton) {
