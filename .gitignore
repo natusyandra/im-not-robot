@@ -97,3 +97,4 @@ iOSInjectionProject/
 fastlane/xcov_report/
 
 Podfile.lock
+IDEWorkspaceChecks.plist
