@@ -2,6 +2,7 @@
 import UIKit
 import SnapKit
 import AnimatedField
+import TransitionButton
 
 class HelloViewController: UIViewController, UITextFieldDelegate {
     
@@ -15,8 +16,10 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     
     let inputField: AnimatedField = {
         let field = AnimatedField()
-        field.attributedPlaceholder = NSAttributedString(string: "Введите количество игроков...",
-                                                         attributes:[.foregroundColor: UIColor.lightGray])
+        field.attributedPlaceholder = NSAttributedString(
+            string: "Введите количество игроков...",
+            attributes: [.foregroundColor: UIColor.lightGray]
+        )
         field.keyboardType = .numberPad
         field.format.titleAlwaysVisible = false
         field.format.lineColor = UIColor.lightGray
@@ -34,10 +37,14 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     }()
     
     let switchServer: UISwitch = {
-        let switchServ = UISwitch(frame:CGRect(x: 150,
-                                               y: 300,
-                                               width: 0,
-                                               height: 0))
+        let switchServ = UISwitch(
+            frame:CGRect(
+                x: 150,
+                y: 300,
+                width: 0,
+                height: 0
+            )
+        )
         switchServ.onTintColor  = Pallete.blueColor
         return switchServ
     }()
@@ -50,8 +57,8 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         return button
     }()
     
-    let buttonToBegin: MyButton = {
-        let button = MyButton()
+    let buttonToBegin: MainButton = {
+        let button = MainButton()
         button.setTitle("Начать", for: .normal)
         return button
     }()
@@ -59,27 +66,23 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "Передумал",
-                                                           style: UIBarButtonItem.Style.plain, target: nil, action: nil)
         title = "Я не робот"
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        navigationItem.setHidesBackButton(true, animated: true)
         
         addSubviews()
         layoutConstraints()
         
-        buttonToBegin.addTarget(self,
-                                action: #selector(handleShowNext),
-                                for: .touchUpInside)
+        buttonToBegin.addTarget(
+            self,
+            action: #selector(handleShowNext),
+            for: .touchUpInside
+        )
         
         aboutGameWithServer.addTarget(self,
                                       action: #selector(openInformationAboutGameWithServer),
                                       for: .touchUpInside)
         
         self.hideKeyboardWhenTappedAround()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.prefersLargeTitles = false
     }
     
     func addSubviews() {
@@ -124,9 +127,6 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func showAlert(_ message: String?) {
-    }
-    
     @objc func openInformationAboutGameWithServer() {
         let vc = InformationViewController()
         vc.modalTransitionStyle = .flipHorizontal
@@ -134,33 +134,52 @@ class HelloViewController: UIViewController, UITextFieldDelegate {
         self.present(vc, animated: true, completion: nil)
     }
     
-    @objc func handleShowNext(sender: UIButton) {
-        sender.showAnimation()
-        buttonWiggleEmptyField()
-        let vc = GameViewController()
-        guard let numbor = (inputField.text)?.description.toInt() else {
+    @objc func handleShowNext(_ button: MainButton) {
+        guard let number = inputField.text?.description.toInt() else {
+            showAlertError()
             return
         }
         
-        if (1 < numbor), (numbor < 13) {
-            vc.numberOfPlayers = numbor
-            vc.isGameWithServer = switchServer.isOn
-            navigationController?.pushViewController(vc, animated: true)
+        if (2 < number), (number < 13) {
+            animationApply(button, number: number)
+            /// запуск анимации
         } else {
             inputField.text = .none
-            inputField.showAlert("От 2 до 12 игроков")
-            inputField.format.alertPosition = .bottom
-            inputField.format.textColor = .darkGray
-            buttonToBegin.wiggle()
+            showAlertError()
         }
     }
     
-    func buttonWiggleEmptyField() {
-        if ((inputField.text?.isEmpty) != nil) {
-            buttonToBegin.wiggle()
-            let impactMed = UIImpactFeedbackGenerator(style: .rigid)
-            impactMed.impactOccurred()
-        }
+    func animationApply(_ button: MainButton, number: Int) {
+        button.startAnimation()
+        let qualityOfServiceClass = DispatchQoS.QoSClass.background
+        let backgroundQueue = DispatchQueue.global(qos: qualityOfServiceClass)
+        backgroundQueue.async(execute: {
+            
+            sleep(1)
+            
+            DispatchQueue.main.async(execute: { () -> Void in
+                button.stopAnimation(animationStyle: .expand, completion: { [self] in
+                    
+                    let vc = GameViewController()
+                    vc.numberOfPlayers = number
+                    vc.isGameWithServer = switchServer.isOn
+                    
+                    let nav: UINavigationController = .init(rootViewController: vc)
+                    nav.modalTransitionStyle = .crossDissolve
+                    nav.modalPresentationStyle = .overFullScreen
+                    self.definesPresentationContext = true
+                    self.present(nav, animated: true, completion: nil)
+                })
+            })
+        })
+    }
+    
+    func showAlertError() {
+        inputField.showAlert("От 3 до 12 игроков")
+        inputField.format.alertPosition = .bottom
+        buttonToBegin.wiggle()
+        let impactMed = UIImpactFeedbackGenerator(style: .rigid)
+        impactMed.impactOccurred()
     }
 }
 

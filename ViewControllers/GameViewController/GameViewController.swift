@@ -20,8 +20,8 @@ class GameViewController: UIViewController {
         return label
     }()
     
-    let nextHideButton: MyButton = {
-        let button = MyButton()
+    let nextHideButton: MainButton = {
+        let button = MainButton()
         button.setTitle("Показать 👉", for: .normal)
         return button
     }()
@@ -38,17 +38,22 @@ class GameViewController: UIViewController {
     
     private var randomNumberSave: String = ""
     
+    private var test: Int = 0
+    
+    public func some(test: Int) {
+        self.test = test
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .close,
+                                                           target: self,
+                                                           action: #selector(closeHelloViewController))
         addSubviews()
         layoutConstraints()
         startNewGame()
-        nextHideButton.addAction(for: .touchUpInside) { [self] in
-            let impactMed = UIImpactFeedbackGenerator(style: .rigid)
-            impactMed.impactOccurred()
-            self.showHideCard(sender: nextHideButton)
-        }
+        nextHideButtonApplyVibra()
     }
     
     func addSubviews() {
@@ -167,13 +172,22 @@ class GameViewController: UIViewController {
         }
     }
     
-    func newGame() {
+    func nextHideButtonApplyVibra() {
         nextHideButton.addAction(for: .touchUpInside) { [self] in
-            openHelloViewController()
+            let impactMed = UIImpactFeedbackGenerator(style: .rigid)
+            impactMed.impactOccurred()
+            self.showHideCard(sender: nextHideButton)
         }
     }
     
-    @objc func openHelloViewController() {
-        navigationController?.popViewController(animated: true)
+    func newGame() {
+        nextHideButton.addAction(for: .touchUpInside) { [self] in
+            closeHelloViewController()
+        }
+    }
+    
+    @objc func closeHelloViewController() {
+        sleep(1)
+        dismiss(animated: true)
     }
 }
