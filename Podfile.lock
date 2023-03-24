@@ -1,20 +1,24 @@
 PODS:
   - AnimatedField (2.4.4)
   - SnapKit (5.6.0)
+  - TransitionButton (0.5.3)
 
 DEPENDENCIES:
   - AnimatedField
   - SnapKit
+  - TransitionButton
 
 SPEC REPOS:
   trunk:
     - AnimatedField
     - SnapKit
+    - TransitionButton
 
 SPEC CHECKSUMS:
   AnimatedField: af48a2d59a50b33b30446267f7f2af274296203c
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  TransitionButton: 36283346e17c64775a1b3bc3a7a72940a367de1f
 
-PODFILE CHECKSUM: 213031c13104db73ea9e56e1036a7bc1a58d4c7c
+PODFILE CHECKSUM: 01fb423b48fdce96a565dc6df453c426c458311a
 
-COCOAPODS: 1.11.3
+COCOAPODS: 1.12.0

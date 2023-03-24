@@ -5,5 +5,6 @@ use_frameworks!
 target 'ImNotRobot' do
 	pod 'AnimatedField'
 	pod 'SnapKit'
+	pod 'TransitionButton'
 end
 

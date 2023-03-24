@@ -17,7 +17,6 @@ struct RouletteText: View {
     
     var body: some View {
         VStack(alignment:.leading) {
-            
             RouletteCharacters(text: "Я", delay: 0.3)
             RouletteCharacters(text: "не", delay: 1.3)
             RouletteCharacters(text: "робот", delay: 1.8)
@@ -91,10 +90,8 @@ struct RouletteCharacter: View {
                         stopTimer()
                         separatedCharacter = finalCharacter
                     }
-                    
                 }
-                .navigationBarBackButtonHidden()
-            
+
         } else {
             
         }
