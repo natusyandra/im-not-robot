@@ -187,7 +187,6 @@ class GameViewController: UIViewController {
     }
     
     @objc func closeHelloViewController() {
-        sleep(1)
         dismiss(animated: true)
     }
 }
